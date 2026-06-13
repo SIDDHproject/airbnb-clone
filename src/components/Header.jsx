@@ -318,7 +318,7 @@ const Header = () => {
             {/* Language/Globe icon */}
             <button
               onClick={() => setIsLangModalOpen(true)}
-              className="hidden rounded-full px-3 py-2 text-gray-700 hover:bg-gray-50 dark:text-neutral-300 dark:hover:bg-neutral-800 md:flex items-center gap-1.5 transition-colors duration-150 cursor-pointer"
+              className="flex rounded-full px-2 py-1.5 sm:px-3 sm:py-2 text-gray-700 hover:bg-gray-50 dark:text-neutral-300 dark:hover:bg-neutral-800 items-center gap-1 sm:gap-1.5 transition-colors duration-150 cursor-pointer"
             >
               <Globe className="h-4 w-4" />
               <span className="text-xs font-bold">{selectedLanguage.code} · {selectedCurrency.code}</span>
