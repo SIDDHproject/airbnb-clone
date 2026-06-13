@@ -380,7 +380,7 @@ const Header = () => {
                       </div>
                       <div className="w-9 h-11 flex items-center justify-center flex-shrink-0">
                         <img
-                          src="/host_character.png"
+                          src={`${import.meta.env.BASE_URL}host_character.png`}
                           alt="Host character"
                           className="w-full h-full object-contain filter drop-shadow-sm"
                         />

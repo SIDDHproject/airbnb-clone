@@ -408,11 +408,11 @@ export const mockListings = [
       superhost: true
     },
     images: [
-      "/glass_penthouse.png",
+      `${import.meta.env.BASE_URL}glass_penthouse.png`,
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-      "/penthouse_bedroom.png",
-      "/penthouse_terrace.png"
+      `${import.meta.env.BASE_URL}penthouse_bedroom.png`,
+      `${import.meta.env.BASE_URL}penthouse_terrace.png`
     ],
     maxGuests: 4,
     bedrooms: 2,
