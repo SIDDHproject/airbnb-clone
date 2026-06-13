@@ -10,6 +10,7 @@ import HostModal from "./components/HostModal";
 import WishlistDrawer from "./components/WishlistDrawer";
 import LanguageCurrencyModal from "./components/LanguageCurrencyModal";
 import ServicesView from "./components/ServicesView";
+import ExperiencesView from "./components/ExperiencesView";
 import { AnimatePresence } from "framer-motion";
 import { AlertCircle, RefreshCw } from "lucide-react";
 
@@ -26,6 +27,8 @@ const AppContent = () => {
       <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         {activeHeaderTab === "Services" ? (
           <ServicesView />
+        ) : activeHeaderTab === "Experiences" ? (
+          <ExperiencesView />
         ) : filteredListings.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
             {filteredListings.map((listing) => (

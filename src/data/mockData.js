@@ -497,3 +497,70 @@ export const mockServices = [
   }
 ];
 
+export const mockExperiences = [
+  {
+    id: "exp_1",
+    name: "Ride the Tour de France route with Pierre Rolland",
+    price: 232, // ~$232 USD (₹19,279)
+    priceType: "guest",
+    location: "Foix, France",
+    image: "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_2",
+    name: "Play with Presnel in the Kimpembe Cup",
+    price: 80, // ~$80 USD (₹6,610)
+    priceType: "guest",
+    location: "Colombes, France",
+    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_3",
+    name: "Play a match with soccer pros in Miami Stadium",
+    price: 287, // ~$287 USD (₹23,798)
+    priceType: "guest",
+    location: "Miami Gardens, United States",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_4",
+    name: "Play a match with soccer pros in Toronto Stadium",
+    price: 287, // ~$287 USD (₹23,821)
+    priceType: "guest",
+    location: "Toronto, Canada",
+    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_5",
+    name: "Watch party with Abby Wambach and Julie Foudy",
+    price: 57, // ~$57 USD (₹4,760)
+    priceType: "guest",
+    location: "Los Angeles, United States",
+    image: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_6",
+    name: "FIFA World Cup 26™ fan night with Abby and Julie",
+    price: 57, // ~$57 USD (₹4,760)
+    priceType: "guest",
+    location: "New York, United States",
+    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  },
+  {
+    id: "exp_7",
+    name: "Youth training day with soccer pro Christen Press",
+    price: 172, // ~$172 USD (₹14,279)
+    priceType: "guest",
+    location: "Glendale, United States",
+    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80",
+    badge: "Original"
+  }
+];
+
+
