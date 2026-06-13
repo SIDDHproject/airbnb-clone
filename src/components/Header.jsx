@@ -49,11 +49,12 @@ const Header = () => {
     selectedLanguage,
     selectedCurrency,
     setIsLangModalOpen,
-    t
+    t,
+    activeHeaderTab,
+    setActiveHeaderTab
   } = useApp();
 
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [activeHeaderTab, setActiveHeaderTab] = useState("Homes");
   
   // Search dropdown active state: "location" | "dates" | "guests" | null
   const [activeDropdown, setActiveDropdown] = useState(null);

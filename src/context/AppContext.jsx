@@ -37,6 +37,7 @@ export const AppProvider = ({ children }) => {
 
   const [filters, setFilters] = useState(initialFilters);
   const [selectedListing, setSelectedListing] = useState(null);
+  const [activeHeaderTab, setActiveHeaderTab] = useState("Homes");
 
   // Modals open states
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
@@ -801,6 +802,8 @@ export const AppProvider = ({ children }) => {
         isWishlistDrawerOpen,
         isSearchExpanded,
         filteredListings,
+        activeHeaderTab,
+        setActiveHeaderTab,
         toggleDarkMode,
         toggleFavorite,
         updateFilters,

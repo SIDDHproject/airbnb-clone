@@ -9,11 +9,12 @@ import FilterModal from "./components/FilterModal";
 import HostModal from "./components/HostModal";
 import WishlistDrawer from "./components/WishlistDrawer";
 import LanguageCurrencyModal from "./components/LanguageCurrencyModal";
+import ServicesView from "./components/ServicesView";
 import { AnimatePresence } from "framer-motion";
 import { AlertCircle, RefreshCw } from "lucide-react";
 
 const AppContent = () => {
-  const { filteredListings, clearAllFilters } = useApp();
+  const { filteredListings, clearAllFilters, activeHeaderTab } = useApp();
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 transition-colors duration-300 dark:bg-neutral-900 dark:text-neutral-100">
@@ -23,7 +24,9 @@ const AppContent = () => {
 
       {/* Main Listing Grid */}
       <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex-grow">
-        {filteredListings.length > 0 ? (
+        {activeHeaderTab === "Services" ? (
+          <ServicesView />
+        ) : filteredListings.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
             {filteredListings.map((listing) => (
               <ListingCard

@@ -430,3 +430,70 @@ export const mockListings = [
     ]
   }
 ];
+
+export const mockServices = [
+  {
+    id: "srv_1",
+    name: "Creative Candid Photography by Abinash",
+    price: 60, // ~$60 USD (₹4,999)
+    priceType: "group",
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_2",
+    name: "Goa photo shoot by Samuel",
+    price: 90, // ~$90 USD (₹7,500)
+    priceType: "guest",
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_3",
+    name: "Paperrose Art Studio Photos for all occasions",
+    price: 115, // ~$115 USD (₹9,600)
+    priceType: "guest",
+    rating: null,
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_4",
+    name: "Strength and mobility training by Shane",
+    price: 6, // ~$6 USD (₹480)
+    priceType: "guest",
+    rating: null,
+    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_5",
+    name: "Intimate, raw, honest photos by Bhagyashree",
+    price: 180, // ~$180 USD (₹15,000)
+    priceType: "group",
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_6",
+    name: "Luxury Photography, Video & Drone Service by Emeka",
+    price: 192, // ~$192 USD (₹16,000)
+    priceType: "guest",
+    rating: null,
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  },
+  {
+    id: "srv_7",
+    name: "Portrait and fashion shoots by Mayur",
+    price: 48, // ~$48 USD (₹4,000)
+    priceType: "guest",
+    rating: null,
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80",
+    location: "North Goa"
+  }
+];
+
