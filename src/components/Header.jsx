@@ -471,6 +471,108 @@ const Header = () => {
 
         </div>
 
+        {/* Mobile Switcher Navigation (visible on mobile/tablet, hidden on desktop, hides on scroll) */}
+        <AnimatePresence>
+          {!isScrolled && (
+            <motion.nav
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -5 }}
+              transition={{ duration: 0.15 }}
+              className="flex lg:hidden items-center gap-6 justify-center mt-1 pb-1"
+            >
+              {/* Homes */}
+              <button
+                onClick={() => setActiveHeaderTab("Homes")}
+                className={`group flex items-center gap-2 text-xs font-bold transition-all duration-200 relative pb-1.5 focus:outline-none cursor-pointer hover:scale-105 active:scale-95 ${
+                  activeHeaderTab === "Homes"
+                    ? "text-gray-900 dark:text-white font-extrabold"
+                    : "text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                }`}
+              >
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-115 group-hover:-rotate-3 group-hover:filter group-hover:drop-shadow-[0_2px_8px_rgba(76,175,80,0.4)]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36 34c0-4 3-7 6-7s6 3 6 7c0 4-4.5 7-6 7s-6-3-6-7z" fill="#4CAF50"/>
+                    <rect x="40" y="38" width="4" height="8" rx="1" fill="#795548"/>
+                    <rect x="8" y="22" width="24" height="20" rx="2" fill="#ECEFF1" stroke="#37474F" strokeWidth="2"/>
+                    <path d="M4 22L20 8l16 14" stroke="#37474F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <rect x="17" y="30" width="6" height="12" rx="1" fill="#FF1744"/>
+                    <circle cx="21" cy="36" r="0.75" fill="#FFD600"/>
+                    <rect x="11" y="12" width="4" height="8" fill="#757575"/>
+                  </svg>
+                </div>
+                <span>{t("homes")}</span>
+                {activeHeaderTab === "Homes" && (
+                  <motion.div
+                    layoutId="activeHeaderTabUnderlineMobile"
+                    className="absolute bottom-0 inset-x-0 h-[2px] bg-black dark:bg-white rounded-full"
+                  />
+                )}
+              </button>
+
+              {/* Experiences */}
+              <button
+                onClick={() => setActiveHeaderTab("Experiences")}
+                className={`group flex items-center gap-2 text-xs font-bold transition-all duration-200 relative pb-1.5 focus:outline-none cursor-pointer hover:scale-105 active:scale-95 ${
+                  activeHeaderTab === "Experiences"
+                    ? "text-gray-900 dark:text-white font-extrabold"
+                    : "text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                }`}
+              >
+                <div className="flex-shrink-0 relative">
+                  <span className="absolute -top-3 left-4 bg-primary text-[7px] font-black text-white px-1 py-0.2 rounded shadow-xs tracking-wider transition-transform duration-200 group-hover:scale-110">
+                    NEW
+                  </span>
+                  <svg className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-115 group-hover:-translate-y-0.5 group-hover:rotate-3 group-hover:filter group-hover:drop-shadow-[0_2px_8px_rgba(255,87,34,0.4)]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 6c-8.8 0-16 7.2-16 16 0 6.5 4 12.5 10 14.5l2 3h8l2-3c6-2 10-8 10-14.5 0-8.8-7.2-16-16-16z" fill="#FF5722"/>
+                    <path d="M24 6c-4 0-8 6.5-8 16 0 6.5 2 12.5 5 14.5M24 6c4 0 8 6.5 8 16 0 6.5-2 12.5-5 14.5" stroke="#FFFFFF" strokeWidth="2"/>
+                    <path d="M18 38l2 5M30 38l-2 5" stroke="#424242" strokeWidth="1"/>
+                    <rect x="20" y="42" width="8" height="5" rx="1" fill="#8D6E63" stroke="#4E342E" strokeWidth="1"/>
+                  </svg>
+                </div>
+                <span>{t("experiences")}</span>
+                {activeHeaderTab === "Experiences" && (
+                  <motion.div
+                    layoutId="activeHeaderTabUnderlineMobile"
+                    className="absolute bottom-0 inset-x-0 h-[2px] bg-black dark:bg-white rounded-full"
+                  />
+                )}
+              </button>
+
+              {/* Services */}
+              <button
+                onClick={() => setActiveHeaderTab("Services")}
+                className={`group flex items-center gap-2 text-xs font-bold transition-all duration-200 relative pb-1.5 focus:outline-none cursor-pointer hover:scale-105 active:scale-95 ${
+                  activeHeaderTab === "Services"
+                    ? "text-gray-900 dark:text-white font-extrabold"
+                    : "text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                }`}
+              >
+                <div className="flex-shrink-0 relative">
+                  <span className="absolute -top-3 left-3 bg-primary text-[7px] font-black text-white px-1 py-0.2 rounded shadow-xs tracking-wider transition-transform duration-200 group-hover:scale-110">
+                    NEW
+                  </span>
+                  <svg className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-115 group-hover:rotate-12 group-hover:filter group-hover:drop-shadow-[0_2px_8px_rgba(33,33,33,0.4)]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 38h36v3a1 1 0 01-1 1H7a1 1 0 01-1-1v-3z" fill="#424242" />
+                    <rect x="8" y="35" width="32" height="3" fill="#212121" />
+                    <path d="M10 35c0-10 6-16 14-16s14 6 14 16H10z" fill="#ECEFF1" stroke="#37474F" strokeWidth="1.5"/>
+                    <path d="M24 19c6 0 12 4 13.5 12H24V19z" fill="#CFD8DC" />
+                    <rect x="23" y="14" width="2" height="5" fill="#757575" />
+                    <circle cx="24" cy="12" r="3" fill="#424242" />
+                  </svg>
+                </div>
+                <span>{t("services")}</span>
+                {activeHeaderTab === "Services" && (
+                  <motion.div
+                    layoutId="activeHeaderTabUnderlineMobile"
+                    className="absolute bottom-0 inset-x-0 h-[2px] bg-black dark:bg-white rounded-full"
+                  />
+                )}
+              </button>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+
         {/* Row 2: Large Search Bar (Hides on scroll down) */}
         <AnimatePresence>
           {!isScrolled && (
